@@ -1,0 +1,150 @@
+<Tela>
+    canvas.before:
+        Rectangle:
+            source:"image.jpg"
+            size: root.width*1.4,root.height
+            pos:self.pos  
+    BoxLayout:
+        orientation:'vertical'        
+        BoxLayout:#cabeçalho
+            orientation:'vertical'
+            Label:
+                text: "Loja Goosebumps" 
+                bold:True
+            Label:
+                text:'(Assombrando a moda com estilo)' 
+                bold:True
+        BoxLayout:
+            TextInput:
+                id:nome
+                text:'Digite seu nome.'   
+        BoxLayout:#camisa
+            orientation: 'horizontal'
+            Label:
+                text: 'Camisa Gucci'
+                bold:True
+            CheckBox:
+                id: box1
+                on_active: root.marca_produto('camisa',box1.active,150.00)
+            BoxLayout:
+                Label:
+                    text:'Quantidade'
+                    bold:True
+                TextInput:
+                    id:qt1  
+                    text: '0'
+                    
+        BoxLayout:#calça
+            orientation: 'horizontal'
+            Label:
+                text: 'Calça Versace'
+                bold:True
+            CheckBox:
+                id: box2
+                on_active: root.marca_produto('calça',box2.active,320.60)
+            BoxLayout:
+                Label:
+                    text:'Quantidade'
+                    bold:True
+                TextInput:
+                    id:qt2
+                    text:'0'
+        BoxLayout:#moletom
+            orientation: 'horizontal'
+            Label:
+                text:'Moletom TheNorthFace'
+                bold:True
+            CheckBox:
+                id: box3
+                on_active: root.marca_produto('moletom',box3.active,600.90)
+            BoxLayout:
+                Label:
+                    text:'Quantidade'  
+                    bold:True  
+                TextInput:
+                    id:qt3
+                    text:'0'
+        BoxLayout:#sapato
+            orientation: 'horizontal'
+            Label:
+                text:'Sapato da OffWithe'
+                bold:True
+            CheckBox:
+                id:box4
+                on_active: root.marca_produto('sapato',box4.active,550.89)
+            BoxLayout:
+                Label:
+                    text:'Quantidade'   
+                    bold:True 
+                TextInput:
+                    id:qt4
+                    text:'0'
+        BoxLayout:#bone
+            orientation:'horizontal'
+            Label:
+                text:'Boné Nike'
+                bold:True
+            CheckBox:
+                id:box5
+                on_active:root.marca_produto('bone',box5.active,89.99)
+            BoxLayout:
+                Label:
+                    text:'Quantidade'
+                    bold:True
+                TextInput:
+                    id:qt5
+                    text:'0'
+        BoxLayout:#oculos
+            orientation:'horizontal'
+            Label:
+                text:'Óculos Julliet'
+                bold:True
+            CheckBox:
+                id:box6
+                on_active:root.marca_produto('oculos',box6.active,398.79)
+            BoxLayout:
+                Label:
+                    text:'Quantidade'
+                    bold:True
+                TextInput:
+                    id:qt6
+                    text:'0'
+        BoxLayout:#spinner
+            orientation:'horizontal'
+            Spinner:
+                id:pag
+                values: ['Dinheiro(á vista)','Pix(á vista)','Cartão(á vista)','Cartão(2x com juros)']
+                text: 'Escolha a forma de pagamento'
+                on_text: root.desconto_pagamento()     
+        BoxLayout:#opções
+            orientation: 'horizontal'
+            Button:
+                id:calc
+                text: "Calcula"
+                on_release: root.calcula_total()
+            Button:
+                id:limp
+                on_release:root.limpa()
+                text: "Limpa"
+            Button:
+                id:sai
+                text: "Sair"
+                on_release:root.sair()
+        BoxLayout:#total
+            orientation: 'vertical'
+            Label:
+                text:'TOTAL:'
+                bold:True
+            Label:
+                id:tot
+                text:''   
+                bold:True
+                
+
+
+
+
+
+
+                
+                
