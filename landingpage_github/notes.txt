@@ -1,0 +1,7 @@
+color pallet
+ #2398CF
+ #3783A6
+ #00ABFA
+ #3D677A
+ #35474F
+ #2B3033
