@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html{
+    font-family: "Noto Sans JP", serif;
+    font-optical-sizing: auto;
+    background-color: #2399CF;
+    
+}
+#head{
+    background-color: #3782A5;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+    color: white;
+    
+}
+#menu{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #3D677A;
+    margin: 0 auto;
+    padding: 10px;
+    
+}
+.menu_button{
+    border: none;
+    color: white;
+    font-size: 20px;
+    background-color: #3D677A;
+    cursor: pointer;
+
+}
+button:hover{
+    transform: scale(1.1);
+}
+#modal_about{
+    display: none;
+    color: white;
+    padding: 20px 40px;
+    margin: 0px 40px;
+    text-align: center;
+    background-color: #2B3033a0;
+    
+}
+#modal_projects{
+    display: none;
+    color: white;
+    padding: 20px 40px;
+    margin: 0px 40px;
+    text-align: center;
+    background-color: #2B3033a0;
+    
+}
+#modal_contact{
+    display: none;
+    color: white;
+    padding: 20px 40px;
+    margin: 0px 40px;
+    text-align: center;
+    background-color: #2b3033a0;
+    
+}
